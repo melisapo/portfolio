@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  id: string;
+  top?: string;
+  left?: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<div
+  id={id}
+  class="window fixed hidden min-w-80 overflow-hidden rounded-2xl bg-white shadow-xl"
+>
+  <!-- barra superior -->
+  <div
+    class="titlebar flex items-center justify-between border-b border-gray-200 bg-gray-100 px-4 py-2"
+  >
+    <span class="text-sm font-medium text-gray-600">{title}</span>
+    <button
+      class="close-btn h-3 w-3 rounded-full bg-red-400 transition-colors hover:bg-red-500"
+      data-target={id}></button>
+  </div>
+
+  <!-- contenido -->
+  <div class="p-6">
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,54 @@
+---
+import AppIcon from "./AppIcon.astro";
+import Window from "./Window.astro";
+import AboutMe from "./sections/AboutMe.astro";
+import Projects from "./sections/Projects.astro";
+import Skills from "./sections/Skills.astro";
+import Contact from "./sections/Contact.astro";
+---
+
+<div class="desktop relative h-screen w-screen overflow-hidden">
+  <!-- iconos del escritorio -->
+  <div class="icons grid w-fit grid-cols-2 gap-6 p-8">
+    <AppIcon label="about me" target="window-about" icon="about" />
+    <AppIcon label="projects" target="window-projects" icon="projects" />
+    <AppIcon label="skills" target="window-skills" icon="skills" />
+    <AppIcon label="contact" target="window-contact" icon="contact" />
+  </div>
+
+  <!-- ventanas -->
+  <Window id="window-about" title="about me.">
+    <AboutMe />
+  </Window>
+
+  <Window id="window-projects" title="projects.">
+    <Projects />
+  </Window>
+
+  <Window id="window-skills" title="skills.">
+    <Skills />
+  </Window>
+
+  <Window id="window-contact" title="contact.">
+    <Contact />
+  </Window>
+</div>
+
+<script>
+  const allWindows = () => document.querySelectorAll(".window");
+
+  document.querySelectorAll(".app-icon").forEach((icon) => {
+    icon.addEventListener("click", () => {
+      const target = icon.getAttribute("data-target");
+      allWindows().forEach((w) => w.classList.add("hidden"));
+      document.getElementById(target)?.classList.remove("hidden");
+    });
+  });
+
+  document.querySelectorAll(".close-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-target");
+      document.getElementById(target)?.classList.add("hidden");
+    });
+  });
+</script>

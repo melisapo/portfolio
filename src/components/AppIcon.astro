@@ -1,0 +1,28 @@
+---
+interface Props {
+  label: string;
+  target: string;
+  icon: string;
+}
+
+const { label, target, icon } = Astro.props;
+---
+
+<button
+  class="app-icon group flex cursor-pointer flex-col items-center gap-2"
+  data-target={target}
+>
+  <span class="text-4xl transition-transform group-hover:scale-110">
+    <!-- <img src="/icons/{icon}.png" /> -->
+  </span>
+  <span class="text-sm text-gray-700">{label}</span>
+</button>
+
+<script>
+  document.querySelectorAll(".app-icon").forEach((icon) => {
+    icon.addEventListener("click", () => {
+      const target = icon.getAttribute("data-target");
+      document.getElementById(target)?.classList.remove("hidden");
+    });
+  });
+</script>
