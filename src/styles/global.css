@@ -23,3 +23,28 @@
   --color-grape: #3b255dff;
 }
 
+:root {
+  --grape: #3b255dff;
+  --petal: #ff7195ff;
+
+  --pixel-border: 4px;
+}
+
+.pixel-border-grape {
+  box-shadow:
+    0 calc(var(--pixel-border) * -1) 0 0 var(--grape),
+    0 var(--pixel-border) 0 0 var(--grape),
+    calc(var(--pixel-border) * -1) 0 0 0 var(--grape),
+    var(--pixel-border) 0 0 0 var(--grape);
+  margin: var(--pixel-border);
+}
+
+.pixel-border-petal {
+  box-shadow:
+    0 calc(var(--pixel-border) * -1) 0 0 var(--petal),
+    0 var(--pixel-border) 0 0 var(--petal),
+    calc(var(--pixel-border) * -1) 0 0 0 var(--petal),
+    var(--pixel-border) 0 0 0 var(--petal);
+  margin: var(--pixel-border);
+}
+
