@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/SpaceGrotesk-VariableFont_wght.woff2") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("fonts/VT323-Regular.woff2") format("truetype");
+  font-weight: 400;
+}
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "VT323", monospace;
+
+  --color-cream: #fff9ceff;
+  --color-lime: #b9ff7fff;
+  --color-petal: #ff7195ff;
+  --color-grape: #3b255dff;
+}
+
