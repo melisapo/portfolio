@@ -2,25 +2,37 @@
 interface Props {
   title: string;
   id: string;
-  top?: string;
-  left?: string;
 }
 
 const { title, id } = Astro.props;
 ---
 
-<div
-  id={id}
-  class="window fixed hidden min-w-80 overflow-hidden rounded-2xl bg-white shadow-xl"
->
+<div id={id} class="window pixel-border-grape bg-cream hidden min-w-[900px]">
   <!-- barra superior -->
   <div
-    class="titlebar flex items-center justify-between border-b border-gray-200 bg-gray-100 px-4 py-2"
+    class="titlebar border-grape bg-cream flex items-center justify-between border-b-4 px-4 py-2"
   >
-    <span class="text-sm font-medium text-gray-600">{title}</span>
+    <span class="text-grape font-mono text-4xl">{title}</span>
     <button
-      class="close-btn h-3 w-3 rounded-full bg-red-400 transition-colors hover:bg-red-500"
-      data-target={id}></button>
+      class="close-btn cursor-pointer hover:scale-110 active:scale-90"
+      data-target={id}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="32"
+        height="32"
+        viewBox="0 0 64 64"
+      >
+        <image
+          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABv0lEQVR4Xu2bIU8EMRSE9yx/hORwCIJDYfgVBIWEYJFYAhJF+BUYFI4gznEJfwQLeoekX5q+3V63c/bl2tfpzLy33e1q6Py36nz9gwEwAwCBq73935ZBevz5TrIcJWAAzIDOJKCUfzg+b9kChuuPl1H+6gn/PMAAiObNAEsg7QGqMTWMUgaVjj+5B5QmSA5bOr4BmLoKlO5QcwzQBZ9t18k1vK63ozh5QvT44RKITlDRix7fAER7QPQOLZ4BusDTi6OkZ7w9f5IvjuLkMdUlYAAEATOgdQmUmpb+//1rk9T8ycFhluYpv/DzgNyqYAAEATOgdQlQ0c6t68qIu/tLmiIZD+8DcrMxAJmdnRkgntC8BG5vnkaq0bpOkqLOkf5f3QMMgBmwcAlQK5zb6ZGm6fl/554FDEBmq2sGAALVJUCapx2kup7bOhMg4X2AAZBzdnoz5EPR3g9FSaNUt4lhNH51D6AEDYAgkGuyBLAZEP1ylCircfoegPqG0g8wwhlgAECzZoAgsHgJkIZrxyf3gNoLpPkNwNRlkHagdjybAZqwr8z4ykxnV2YsgdquNfP8eG9w5nxmn84AzA75jk34B99EtF/H6XO6AAAAAElFTkSuQmCC"
+          x="0"
+          y="0"
+          width="64"
+          height="64"
+        />
+      </svg>
+    </button>
   </div>
 
   <!-- contenido -->

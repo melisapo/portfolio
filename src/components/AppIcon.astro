@@ -2,27 +2,19 @@
 interface Props {
   label: string;
   target: string;
-  icon: string;
 }
 
-const { label, target, icon } = Astro.props;
+const { label, target } = Astro.props;
 ---
 
 <button
   class="app-icon group flex cursor-pointer flex-col items-center gap-2"
   data-target={target}
 >
-  <span class="transition-transform group-hover:scale-110">
-    <!-- <img src="/icons-desk/{icon}.png" /> -->
+  <span class="text-3xl">
+    <div class="hover:scale-110 active:scale-90">
+      <slot />
+    </div>
+    <span class="text-grape font-mono text-3xl">{label}</span>
   </span>
-  <span class="text-gray-800">{label}</span>
 </button>
-
-<script>
-  document.querySelectorAll(".app-icon").forEach((icon) => {
-    icon.addEventListener("click", () => {
-      const target = icon.getAttribute("data-target");
-      document.getElementById(target)?.classList.remove("hidden");
-    });
-  });
-</script>
