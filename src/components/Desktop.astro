@@ -15,39 +15,39 @@ import Mug from "./icons/app/Mug.astro";
 
 <div class="desktop flex h-screen items-center gap-20 overflow-hidden">
   <!-- iconos del escritorio -->
-  <div class="icons my-auto grid w-fit grid-cols-2 gap-12 p-12">
-    <AppIcon label="about me" target="window-about">
+  <div class="icons my-auto grid w-fit grid-cols-2 gap-20 p-12">
+    <AppIcon label="sobre mi" target="window-about">
       <Berry size="100" />
     </AppIcon>
 
-    <AppIcon label="projects" target="window-projects">
+    <AppIcon label="proyectos" target="window-projects">
       <Btn size="100" />
     </AppIcon>
 
-    <AppIcon label="skills" target="window-skills">
+    <AppIcon label="habilidades" target="window-skills">
       <Mug size="100" />
     </AppIcon>
 
-    <AppIcon label="contact" target="window-contact">
+    <AppIcon label="contactame" target="window-contact">
       <Bug size="100" />
     </AppIcon>
   </div>
 
   <!-- ventanas -->
   <div class="my-auto w-fit">
-    <Window id="window-about" title="about me.">
+    <Window id="window-about" title="sobre mi.">
       <AboutMe />
     </Window>
 
-    <Window id="window-projects" title="projects.">
+    <Window id="window-projects" title="mis proyectos y experiencia.">
       <Projects />
     </Window>
 
-    <Window id="window-skills" title="skills.">
+    <Window id="window-skills" title="habilidades, lenguajes y tecnologias.">
       <Skills />
     </Window>
 
-    <Window id="window-contact" title="contact.">
+    <Window id="window-contact" title="contactame.">
       <Contact />
     </Window>
   </div>

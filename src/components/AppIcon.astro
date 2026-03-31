@@ -8,13 +8,13 @@ const { label, target } = Astro.props;
 ---
 
 <button
-  class="app-icon group flex cursor-pointer flex-col items-center gap-2"
+  class="app-icon group flex cursor-pointer flex-col items-center"
   data-target={target}
 >
   <span class="text-3xl">
     <div class="hover:scale-110 active:scale-90">
       <slot />
     </div>
-    <span class="text-grape font-mono text-3xl">{label}</span>
+    <span class="text-wine font-mono text-3xl">{label}</span>
   </span>
 </button>
