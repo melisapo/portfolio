@@ -7,10 +7,10 @@ interface Props {
 const { title, id } = Astro.props;
 ---
 
-<div id={id} class="window pixel-border bg-cream hidden min-w-[800px]">
+<div id={id} class="window pixel-border bg-cream hidden h-[525px] w-[800px]">
   <!-- barra superior -->
   <div
-    class="titlebar bg-lime/50 border-wine flex items-center justify-between border-b-3 px-4 py-2"
+    class="titlebar bg-lime/60 border-wine flex items-center justify-between border-b-3 border-dashed px-4 py-2"
   >
     <span class="text-wine font-mono text-4xl">{title}</span>
     <button
@@ -35,6 +35,7 @@ const { title, id } = Astro.props;
     </button>
   </div>
   <div class="">
+    <div class="bg-lime/60 border-wine/20 h-[4px] w-full border-b"></div>
     <slot />
   </div>
 </div>
