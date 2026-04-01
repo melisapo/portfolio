@@ -7,7 +7,10 @@ interface Props {
 const { title, id } = Astro.props;
 ---
 
-<div id={id} class="window pixel-border bg-cream hidden h-[520px] w-[800px]">
+<div
+  id={id}
+  class="window pixel-border bg-cream hidden h-[520px] w-[800px] overflow-hidden"
+>
   <!-- barra superior -->
   <div
     class="titlebar bg-lime/60 border-wine flex items-center justify-between border-b-3 border-dashed px-4 py-2"
