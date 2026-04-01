@@ -1,1 +1,79 @@
-<a href="https://github.com/melisapo">mi githab</a>
+---
+import Button from "../ui/Button.astro";
+import GithubIcon from "../icons/contact/GitHub.astro";
+import LinkedInIcon from "../icons/contact/LinkedIn.astro";
+import TelegramIcon from "../icons/contact/Telegram.astro";
+---
+
+<div class="pixel-bg-squares text-wine items-place-center grid p-16">
+  <div
+    class="bg-cream pixel-border flex flex-col items-center justify-center gap-8 p-16"
+  >
+    <h2 class="font-mono text-5xl">Ponte en contacto conmigo:</h2>
+
+    <div class="flex items-center justify-evenly gap-12">
+      <!-- COPY EMAIL -->
+      <div
+        class="pixel-border font-display pixel-bg-sheet flex items-center gap-12 text-xl font-semibold"
+      >
+        <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
+        <button
+          class="bg-wine text-sand pixel-border-nm scale-110 cursor-pointer p-1 hover:scale-120 active:scale-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"
+            ></path></svg
+          >
+        </button>
+      </div>
+
+      <Button id="dw-cv" color="petal">
+        <p>Descargar CV</p>
+      </Button>
+    </div>
+    <p class="font-mono text-4xl">Y puedes encontrarme en:</p>
+
+    <!-- TEKNOLOYIA -->
+    <div class="flex items-center gap-8">
+      <div
+        class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
+      >
+        <a
+          href="https://github.com/melisapo"
+          class="cursor-pointer hover:scale-110 active:scale-90"
+        >
+          <GithubIcon size="50" />
+        </a>
+        <p>GitHub</p>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
+      >
+        <a
+          href="https://github.com/melisapo"
+          class="cursor-pointer hover:scale-110 active:scale-90"
+        >
+          <LinkedInIcon size="50" />
+        </a>
+        <p>LinkedIn</p>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
+      >
+        <a
+          href="https://github.com/melisapo"
+          class="cursor-pointer hover:scale-110 active:scale-90"
+        >
+          <TelegramIcon size="50" />
+        </a>
+        <p>Telegram</p>
+      </div>
+    </div>
+  </div>
+</div>

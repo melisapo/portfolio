@@ -1,8 +1,8 @@
 ---
-
+import Button from "../ui/Button.astro";
 ---
 
-<div class="text-wine font-display flex flex-col items-center gap-8 p-6">
+<div class="text-wine font-display flex flex-col items-center gap-6 p-6">
   <div class="flex items-center gap-20">
     <div class="flex flex-col gap-4">
       <h2 class="font-mono text-6xl">Hola, me llamo Melissa!</h2>
@@ -15,8 +15,8 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="170"
-        height="170"
+        width="150"
+        height="150"
         viewBox="0 0 256 256"
         class="absolute"
       >
@@ -43,13 +43,11 @@
     demostrar mis habilidades y contribuir en proyectos con impacto real.
   </p>
   <div class="flex items-center gap-20">
-    <button
-      class="bg-petal pixel-border hover:bg-petal/90 cursor-pointer px-8 py-2 font-mono text-4xl text-white hover:scale-105 active:scale-95"
-      >Descargar CV</button
-    >
-    <button
-      class="bg-lime pixel-border hover:bg-lime/90 cursor-pointer px-8 py-2 font-mono text-4xl text-white hover:scale-105 active:scale-95"
-      >Contactame</button
-    >
+    <Button id="dw-cv" color="petal">
+      <p>Descargar CV</p>
+    </Button>
+    <Button id="contact" color="lime">
+      <p>Contactame</p>
+    </Button>
   </div>
 </div>

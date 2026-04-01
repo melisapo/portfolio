@@ -54,14 +54,18 @@
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='21' viewBox='0 0 100 20'%3E%3Crect x='0' y='14' width='100%25' height='2' fill='rgba(123,181,31,0.3)'/%3E%3C/svg%3E"),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%50' height='100%50' viewBox='0 0 100 100'%3E%3Cline x1='16' y1='0' x2='16' y2='100' stroke='rgba(255,66,135,0.5)' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-repeat: repeat, no-repeat;
+  background-repeat: repeat, repeat-y;
 }
 
-.pixel-bg-sheet::after {
+.pixel-bg-squares {
+  background-image: url(./grid.png);
+  background-repeat: repeat;
 }
 
-.pixel-main-btn {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='128' height='64' viewBox='0 0 128 64'%3E%3Cimage xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABACAYAAADS1n9/AAACNklEQVR4Xu2dMU4DQQxFWYmOY9BwBI5DSYvEMZBoKTlOjkDDMeiQgujIgHAs7zp/fl7a8Yzt/592R8luZrlIfj73+31yCuGNClwuy5JJlwr+XhgAMvL2xwJAv+ZSGQFAyo7+YlYHYLzkP17d9HdFxqMVePp4O4iNgAj3AABwtPYSgQAgYcPpigCA02kvkbkMQHTJf769k2iUIv5W4GH3ejAQAfFrDwAAc6MFAHP7V64eAMoSzr1AGoDyJf/+elvFXt63Xd989QiIBQC8CQAAb3/D7gAglMg7YH0Aons+92wpogBAyo7+YgCgX3OpjAAgZUd/MdsDwD2/39VERgBIiOUYCgCOriZ6AoCEWI6hAODoaqInAEiI5RgKAI6uJnoCgIRYjqEA4Ojqz57G32aG72UAAAAOFBgfEs0/EBIQ5663XH9cAeQs6S0IAHr1lssGAHKW9BYEAL16y2UDADlLegtqB6C3PbJFCgBApJD5OACYGxy1BwCRQubjAGBucNQeAEQKmY8DgLnBUXsAEClkPg4A5gaP7SXfzVz/eYAz01uuXQCQs6S3IADo1VsuGwDIWfJ/QZFh1XaCdzPZA1QFrs4HgKqCk88HgMkNrJavDsDYX/lv46qCMb+kQHTPH88P4L+CS3LrTQYAPU9aKwKAVrn1kpUByO4J9CQ474qi8wFGdTgzyIwXADAzNNsOAGQVM4tfHYBoT2Cm3/TtROcEpvcAADAXEwAwl1+rVwsAq0s614JZAL4AiR6XR2D927sAAAAASUVORK5CYII=' x='0' y='0' width='128' height='64'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: cover;
+.pixel-border-nm {
+  box-shadow:
+    0 calc(var(--pixel-border) * -1) 0 0 var(--wine),
+    0 var(--pixel-border) 0 0 var(--wine),
+    calc(var(--pixel-border) * -1) 0 0 0 var(--wine),
+    var(--pixel-border) 0 0 0 var(--wine);
 }
