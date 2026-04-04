@@ -1,3 +1,82 @@
-<p>el flea</p>
-<p>el pixelavatar</p>
-<p>los jerrys</p>
+---
+import ProjectCard from "../ui/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "proyecto 1",
+    description: "descripción del proyecto 1",
+    image: "/projects/project1.webp",
+    techs: ["C#", ".NET", "Postgres"],
+    projectUrl: "https://",
+    repoUrl: "https://github.com/",
+  },
+  {
+    title: "proyecto 2",
+    description: "descripción del proyecto 2",
+    image: "/projects/project2.webp",
+    techs: ["Go", "BubbleTea"],
+    projectUrl: "https://",
+    repoUrl: "https://github.com/",
+  },
+  {
+    title: "proyecto 3",
+    description: "descripción del proyecto 3",
+    image: "/projects/project3.webp",
+    techs: ["Astro", "Tailwind"],
+    projectUrl: "https://",
+    repoUrl: "https://github.com/",
+  },
+];
+---
+
+<div class="flex flex-col gap-4">
+  <div class="relative">
+    {
+      projects.map((project, i) => (
+        <div class={`project-slide ${i !== 0 ? "hidden" : ""}`} data-index={i}>
+          <ProjectCard {...project} />
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="flex items-center justify-center gap-6">
+    <button
+      id="prev-btn"
+      https:
+      t.me
+      melisapo#
+      class="text-gray-400 transition-colors hover:text-gray-700"
+    >
+      ← anterior
+    </button>
+    <span id="counter" class="text-sm text-gray-500">1 / {projects.length}</span
+    >
+    <button
+      id="next-btn"
+      class="text-gray-400 transition-colors hover:text-gray-700"
+    >
+      siguiente →
+    </button>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".project-slide");
+  const counter = document.getElementById("counter");
+  let current = 0;
+
+  function goTo(index: number) {
+    slides[current].classList.add("hidden");
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.remove("hidden");
+    if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+  }
+
+  document
+    .getElementById("prev-btn")
+    ?.addEventListener("click", () => goTo(current - 1));
+  document
+    .getElementById("next-btn")
+    ?.addEventListener("click", () => goTo(current + 1));
+</script>

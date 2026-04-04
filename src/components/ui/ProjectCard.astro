@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  techs: string[];
+  projectUrl?: string;
+  repoUrl: string;
+}
+
+const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
+---
+
+<div class="project-card flex flex-col gap-4">
+  <img src={image} alt={title} class="h-48 w-full rounded-xl object-cover" />
+
+  <div class="flex flex-col gap-2">
+    <h2 class="text-lg font-semibold">{title}</h2>
+    <p class="text-sm text-gray-600">{description}</p>
+  </div>
+
+  <div class="flex flex-wrap gap-2">
+    {
+      techs.map((tech) => (
+        <span class="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+          {tech}
+        </span>
+      ))
+    }
+  </div>
+
+  <div class="mt-auto flex gap-3">
+    {
+      projectUrl && (
+        <a href={projectUrl} target="_blank" class="text-sm underline">
+          ver proyecto
+        </a>
+      )
+    }
+    <a href={repoUrl} target="_blank" class="text-sm underline"> ver repo </a>
+  </div>
+</div>
