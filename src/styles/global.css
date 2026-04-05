@@ -26,7 +26,7 @@
 
 :root {
   --wine: #700a27ff;
-  --petal: #ff4287ff;
+  --petal: #fff5d9ff;
 
   --pixel-border: 4px;
 }
@@ -58,11 +58,11 @@
 }
 
 .pixel-bg-squares {
-  background-image: url(./grid.png);
+  background-image: url(decorations/grid.png);
   background-repeat: repeat;
 }
 .pixel-bg-stars {
-  background-image: url(./star-pattern.png);
+  background-image: url(decorations/star-pattern.png);
   background-repeat: repeat;
 }
 
