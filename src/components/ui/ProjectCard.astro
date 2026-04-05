@@ -11,32 +11,71 @@ interface Props {
 const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
 ---
 
-<div class="project-card flex flex-col gap-4">
-  <img src={image} alt={title} class="h-48 w-full rounded-xl object-cover" />
+<div
+  class="project-card text-wine font-display flex h-[400px] max-w-[500px] flex-col gap-4 pt-4"
+>
+  <img src={image} alt={title} class="pixel-border h-85 w-full" />
 
-  <div class="flex flex-col gap-2">
-    <h2 class="text-lg font-semibold">{title}</h2>
-    <p class="text-sm text-gray-600">{description}</p>
+  <div class="flex items-center justify-between">
+    <h2 class="font-mono text-3xl">{title}</h2>
+    <div class="flex flex-wrap gap-2">
+      {
+        techs.map((tech) => (
+          <span class="pixel-border-petal bg-petal text-sand px-2 py-1 text-sm font-semibold">
+            {tech}
+          </span>
+        ))
+      }
+    </div>
   </div>
 
-  <div class="flex flex-wrap gap-2">
-    {
-      techs.map((tech) => (
-        <span class="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
-          {tech}
-        </span>
-      ))
-    }
-  </div>
+  <div class="flex items-center justify-between">
+    <p class="text-wine/90 font-medium">{description}</p>
 
-  <div class="mt-auto flex gap-3">
-    {
-      projectUrl && (
-        <a href={projectUrl} target="_blank" class="text-sm underline">
-          ver proyecto
-        </a>
-      )
-    }
-    <a href={repoUrl} target="_blank" class="text-sm underline"> ver repo </a>
+    <div class="mt-auto flex justify-end gap-3">
+      {
+        projectUrl && (
+          <a
+            title="Demo"
+            href={projectUrl}
+            target="_blank"
+            class="hover:text-petal cursor-pointer hover:scale-110 active:scale-90"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="cust-pointer"
+            >
+              <g fill="currentColor">
+                <>
+                  <path d="M11 5H5v2h6zM5 7H3v12h2zm12 12H5v2h12zm2-6h-2v6h2zm-8 0H9v2h2zm2-2h-2v2h2zm2-2h-2v2h2zm2-2h-2v2h2zm2-2h-2v2h2zm2-2h-2v8h2z" />
+                  <path d="M21 3h-8v2h8z" />
+                </>
+              </g>
+            </svg>
+          </a>
+        )
+      }
+      <a
+        title="GitHub repo"
+        href={repoUrl}
+        target="_blank"
+        class="hover:text-petal cursor-pointer hover:scale-110 active:scale-90"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="cust-pointer"
+          ><path
+            fill="currentColor"
+            d="M23 9v6h-1v2h-1v2h-1v1h-1v1h-1v1h-2v1h-1v-5h-1v-1h1v-1h2v-1h1v-1h1V9h-1V6h-2v1h-1v1h-1V7h-4v1H9V7H8V6H6v3H5v5h1v1h1v1h2v2H7v-1H6v-1H4v1h1v2h1v1h3v3H8v-1H6v-1H5v-1H4v-1H3v-2H2v-2H1V9h1V7h1V5h1V4h1V3h2V2h2V1h6v1h2v1h2v1h1v1h1v2h1v2z"
+          ></path></svg
+        >
+      </a>
+    </div>
   </div>
 </div>

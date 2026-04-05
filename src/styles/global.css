@@ -26,9 +26,23 @@
 
 :root {
   --wine: #700a27ff;
-  --petal: #fff5d9ff;
+  --petal: #ff4287ff;
+  --sand: #fff5d9ff;
 
   --pixel-border: 4px;
+  --pixel-border-sm: 3px;
+}
+
+body,
+* {
+  cursor: url("cursors/cursor.png"), auto;
+}
+a,
+button,
+[role="button"],
+input[type="submit"],
+.cust-pointer {
+  cursor: url("cursors/cursor-pointer.png"), pointer;
 }
 
 .pixel-border {
@@ -42,10 +56,19 @@
 
 .pixel-border-petal {
   box-shadow:
-    0 calc(var(--pixel-border) * -1) 0 0 var(--petal),
-    0 var(--pixel-border) 0 0 var(--petal),
-    calc(var(--pixel-border) * -1) 0 0 0 var(--petal),
-    var(--pixel-border) 0 0 0 var(--petal);
+    0 calc(var(--pixel-border-sm) * -1) 0 0 var(--petal),
+    0 var(--pixel-border-sm) 0 0 var(--petal),
+    calc(var(--pixel-border-sm) * -1) 0 0 0 var(--petal),
+    var(--pixel-border-sm) 0 0 0 var(--petal);
+  margin: var(--pixel-border-sm);
+}
+
+.pixel-border-sand {
+  box-shadow:
+    0 calc(var(--pixel-border) * -1) 0 0 var(--sand),
+    0 var(--pixel-border) 0 0 var(--sand),
+    calc(var(--pixel-border) * -1) 0 0 0 var(--sand),
+    var(--pixel-border) 0 0 0 var(--sand);
   margin: var(--pixel-border);
 }
 

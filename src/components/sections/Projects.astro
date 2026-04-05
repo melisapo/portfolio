@@ -3,34 +3,37 @@ import ProjectCard from "../ui/ProjectCard.astro";
 
 const projects = [
   {
-    title: "proyecto 1",
-    description: "descripción del proyecto 1",
-    image: "/projects/project1.webp",
-    techs: ["C#", ".NET", "Postgres"],
-    projectUrl: "https://",
-    repoUrl: "https://github.com/",
+    title: "Pixel Avatar",
+    description:
+      "Es un microservicio gratuito y simple para crear avatares basados en cualquier entrada de texto. Su principal objetivo es servir como imagen de respaldo o avatar predeterminado en aplicaciones web, especialmente útil cuando un usuario no ha subido su propia foto.",
+    image: "/project-shots/pixel-avatar.webp",
+    techs: ["C#", "ASP.NET Core", "Web Components", "TailwindCSS"],
+    projectUrl: "https://pixelavatar.onrender.com",
+    repoUrl: "https://github.com/melisapo/pixel-avatar-api",
   },
   {
-    title: "proyecto 2",
-    description: "descripción del proyecto 2",
-    image: "/projects/project2.webp",
-    techs: ["Go", "BubbleTea"],
-    projectUrl: "https://",
-    repoUrl: "https://github.com/",
+    title: "FleaMarket",
+    description:
+      "Es una aplicación web tipo marketplace, diseñada para facilitar la compra-venta de artículos de segunda mano entre particulares, con un enfoque en el trato directo. Su principal objetivo es centralizar ofertas y permitir búsquedas avanzadas por categorías y precios, evitando que los anuncios se pierdan en redes sociales, sirviendo como alternativa local a plataformas genéricas.",
+    image: "/project-shots/flea.webp",
+    techs: ["C#", "ASP.NET MVC", "PostgreSQL"],
+    repoUrl: "https://github.com/melisapo/flea",
   },
   {
-    title: "proyecto 3",
-    description: "descripción del proyecto 3",
+    title: "Jerry's Pixel Icons",
+    description:
+      "Extensión para Visual Studio Code que reemplaza los iconos del explorador de archivos por un set en estilo pixel-art, aportando un toque divertido y retro a tu editor. Actualmente con mas de 1k instalaciones.",
     image: "/projects/project3.webp",
-    techs: ["Astro", "Tailwind"],
-    projectUrl: "https://",
-    repoUrl: "https://github.com/",
+    techs: ["Aseprite", "JavaScript"],
+    projectUrl:
+      "https://marketplace.visualstudio.com/items?itemName=MelissaGutierrez.jerrys-pixel-icons&ssr=false#overview",
+    repoUrl: "https://github.com/wolfsouldev/jerrys-pixel-icons",
   },
 ];
 ---
 
-<div class="flex flex-col gap-4">
-  <div class="relative">
+<div class="jutify-between flex w-full flex-col items-center px-8 pb-8">
+  <div>
     {
       projects.map((project, i) => (
         <div class={`project-slide ${i !== 0 ? "hidden" : ""}`} data-index={i}>
@@ -40,23 +43,31 @@ const projects = [
     }
   </div>
 
-  <div class="flex items-center justify-center gap-6">
+  <div class="flex w-full items-end justify-between">
     <button
       id="prev-btn"
-      https:
-      t.me
-      melisapo#
-      class="text-gray-400 transition-colors hover:text-gray-700"
+      class="cursor-pointer hover:scale-110 active:scale-90"
     >
-      ← anterior
+      <img
+        src="decorations/project-arrow.png"
+        alt=""
+        class="h-16 w-16"
+        role="button"
+      />
     </button>
-    <span id="counter" class="text-sm text-gray-500">1 / {projects.length}</span
+    <span id="counter" class="text-wine/90 font-mono text-3xl"
+      >1 / {projects.length}</span
     >
     <button
       id="next-btn"
-      class="text-gray-400 transition-colors hover:text-gray-700"
+      class="cursor-pointer hover:scale-110 active:scale-90"
     >
-      siguiente →
+      <img
+        alt="→"
+        src="decorations/project-arrow.png"
+        class="h-16 w-16 rotate-180"
+        role="button"
+      />
     </button>
   </div>
 </div>
