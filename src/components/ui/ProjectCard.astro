@@ -17,11 +17,11 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
   <img src={image} alt={title} class="pixel-border h-85 w-full" />
 
   <div class="flex items-center justify-between">
-    <h2 class="font-mono text-3xl">{title}</h2>
+    <h2 class="font-mono text-4xl">{title}</h2>
     <div class="flex flex-wrap gap-2">
       {
         techs.map((tech) => (
-          <span class="pixel-border-petal bg-petal text-sand px-2 py-1 text-sm font-semibold">
+          <span class="pixel-border-petal bg-petal px-2 py-1 text-sm font-semibold text-white">
             {tech}
           </span>
         ))

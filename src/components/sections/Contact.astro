@@ -6,17 +6,21 @@ import TelegramIcon from "../icons/contact/Telegram.astro";
 ---
 
 <div
-  class="pixel-bg-squares bg-cream/30 text-wine grid w-full place-items-center p-20 bg-blend-soft-light"
+  class="pixel-bg-squares bg-cream/30 text-wine grid w-full place-items-center p-10 bg-blend-soft-light"
 >
   <div
-    class="bg-cream pixel-border flex flex-col items-center justify-center gap-8 p-14"
+    class="bg-cream pixel-border flex flex-col items-center justify-center gap-2 px-20 py-10"
   >
-    <h2 class="font-mono text-5xl">Ponte en contacto conmigo:</h2>
+    <h2
+      class="border-wine/50 w-full border-b-3 border-dashed pb-2 text-center font-mono text-5xl"
+    >
+      How to reach me:
+    </h2>
 
-    <div class="flex items-center justify-evenly gap-12">
+    <div class="flex flex-col items-center justify-evenly gap-6 pt-10">
       <!-- COPY EMAIL -->
       <div
-        class="pixel-border font-display pixel-bg-sheet flex items-center gap-12 text-xl font-semibold"
+        class="pixel-border font-display bg-sand flex items-center gap-12 text-xl font-semibold"
       >
         <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
         <button
@@ -35,57 +39,54 @@ import TelegramIcon from "../icons/contact/Telegram.astro";
           >
         </button>
       </div>
+      <p class="mt-2 font-mono text-4xl">You can find me here:</p>
+
+      <!-- TEKNOLOYIA -->
+      <div class="flex items-center gap-10 py-2">
+        <div
+          class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
+        >
+          <a
+            href="https://github.com/melisapo"
+            class="cursor-pointer hover:scale-110 active:scale-90"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <GithubIcon size="50" />
+          </a>
+          <p>GitHub</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
+        >
+          <a
+            href="https://www.linkedin.com/in/melisapo"
+            class="cursor-pointer hover:scale-110 active:scale-90"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <LinkedInIcon size="50" />
+          </a>
+          <p>LinkedIn</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
+        >
+          <a
+            href="https://t.me/melisapo"
+            class="cursor-pointer hover:scale-110 active:scale-90"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <TelegramIcon size="50" />
+          </a>
+          <p>Telegram</p>
+        </div>
+      </div>
 
       <Button id="dw-cv" color="petal">
-        <p class="cust-pointer">Descargar CV</p>
+        <p class="cust-pointer">Download CV</p>
       </Button>
-    </div>
-    <p class="font-mono text-4xl">Y puedes encontrarme en:</p>
-
-    <!-- TEKNOLOYIA -->
-    <div class="flex items-center gap-8">
-      <div
-        class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
-      >
-        <a
-          title="Perfil de GitHub"
-          href="https://github.com/melisapo"
-          class="cursor-pointer hover:scale-110 active:scale-90"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <GithubIcon size="50" />
-        </a>
-        <p>GitHub</p>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
-      >
-        <a
-          title="Perfil de LinkedIn"
-          href="https://www.linkedin.com/in/melisapo"
-          class="cursor-pointer hover:scale-110 active:scale-90"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <LinkedInIcon size="50" />
-        </a>
-        <p>LinkedIn</p>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
-      >
-        <a
-          title="Telegram"
-          href="https://t.me/melisapo"
-          class="cursor-pointer hover:scale-110 active:scale-90"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <TelegramIcon size="50" />
-        </a>
-        <p>Telegram</p>
-      </div>
     </div>
   </div>
 </div>

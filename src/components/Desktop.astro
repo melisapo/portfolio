@@ -16,38 +16,38 @@ import Mug from "./icons/app/Mug.astro";
 <div class="desktop flex h-screen items-center justify-between overflow-hidden">
   <!-- iconos del escritorio -->
   <div class="icons my-auto grid w-fit grid-cols-2 gap-12 p-12">
-    <AppIcon label="sobre mi" target="window-about">
+    <AppIcon label="about me" target="window-about">
       <Berry size="100" />
     </AppIcon>
 
-    <AppIcon label="proyectos" target="window-projects">
+    <AppIcon label="projects" target="window-projects">
       <Btn size="100" />
     </AppIcon>
 
-    <AppIcon label="habilidades" target="window-skills">
+    <AppIcon label="skills" target="window-skills">
       <Mug size="100" />
     </AppIcon>
 
-    <AppIcon label="contactame" target="window-contact">
+    <AppIcon label="contact" target="window-contact">
       <Bug size="100" />
     </AppIcon>
   </div>
 
   <!-- ventanas -->
   <div class="my-auto w-fit">
-    <Window id="window-about" title="sobre mi.">
+    <Window id="window-about" title="about me.">
       <AboutMe />
     </Window>
 
-    <Window id="window-projects" title="mis proyectos y experiencia.">
+    <Window id="window-projects" title="my projects and experience.">
       <Projects />
     </Window>
 
-    <Window id="window-skills" title="habilidades, lenguajes y tecnologias.">
+    <Window id="window-skills" title="skills, languages and technologies.">
       <Skills />
     </Window>
 
-    <Window id="window-contact" title="contactame.">
+    <Window id="window-contact" title="contact me.">
       <Contact />
     </Window>
   </div>

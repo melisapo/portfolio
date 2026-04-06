@@ -13,9 +13,15 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "SymbolsNerdFonts";
+  src: url("fonts/SymbolsNerdFont-Regular.woff2");
+}
+
 @theme {
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "VT323", monospace;
+  --font-symbols: "SymbolsNerdFonts", sans-serif;
 
   --color-sand: #fff5d9ff;
   --color-cream: #ffecb3ff;
@@ -30,7 +36,7 @@
   --sand: #fff5d9ff;
 
   --pixel-border: 4px;
-  --pixel-border-sm: 3px;
+  --pixel-border-sm: 2px;
 }
 
 body,
