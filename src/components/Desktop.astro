@@ -15,22 +15,36 @@ import Mug from "./icons/app/Mug.astro";
 
 <div class="desktop flex h-screen items-center justify-between overflow-hidden">
   <!-- iconos del escritorio -->
-  <div class="icons my-auto grid w-fit grid-cols-2 gap-12 p-12">
-    <AppIcon label="about me" target="window-about">
-      <Berry size="100" />
-    </AppIcon>
+  <div class="flex flex-col">
+    <div class="icons my-auto grid w-fit grid-cols-2 gap-6 p-12">
+      <AppIcon label="about me" target="window-about">
+        <Berry size="100" />
+      </AppIcon>
 
-    <AppIcon label="projects" target="window-projects">
-      <Btn size="100" />
-    </AppIcon>
+      <AppIcon label="projects" target="window-projects">
+        <Btn size="100" />
+      </AppIcon>
 
-    <AppIcon label="skills" target="window-skills">
-      <Mug size="100" />
-    </AppIcon>
+      <AppIcon label="skills" target="window-skills">
+        <Mug size="100" />
+      </AppIcon>
 
-    <AppIcon label="contact" target="window-contact">
-      <Bug size="100" />
-    </AppIcon>
+      <AppIcon label="contact" target="window-contact">
+        <Bug size="100" />
+      </AppIcon>
+    </div>
+    <div class="group relative h-64 w-64 overflow-hidden">
+      <img
+        src="./hola-static.png"
+        alt="GIF"
+        class="h-full w-full object-cover group-hover:hidden"
+      />
+      <img
+        src="./hola.gif"
+        alt="GIF"
+        class="hidden h-full w-full object-cover group-hover:block"
+      />
+    </div>
   </div>
 
   <!-- ventanas -->
