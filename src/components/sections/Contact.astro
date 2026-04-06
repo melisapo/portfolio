@@ -24,6 +24,7 @@ import TelegramIcon from "../icons/contact/Telegram.astro";
       >
         <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
         <button
+          id="copy-email"
           class="bg-wine text-sand pixel-border-nm scale-110 cursor-pointer p-1 hover:scale-120 active:scale-100"
         >
           <svg
@@ -84,9 +85,28 @@ import TelegramIcon from "../icons/contact/Telegram.astro";
         </div>
       </div>
 
-      <Button id="dw-cv" color="petal">
+      <Button>
         <p class="cust-pointer">Download CV</p>
       </Button>
     </div>
   </div>
 </div>
+
+<script>
+  const btn = document.getElementById("copy-email");
+
+  const iconCopy = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="cust-pointer"><path fill="currentColor" d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"/></svg>`;
+
+  const iconCheck = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18H8v-2h2zm-2-2H6v-2h2zm4-2v2h-2v-2zm-6 0H4v-2h2zm8 0h-2v-2h2zm2-2h-2v-2h2zm2-2h-2V8h2zm2-2h-2V6h2z"/></svg>`;
+
+  btn?.addEventListener("click", () => {
+    navigator.clipboard.writeText("melissagh3009@gmail.com").then(() => {
+      if (btn) {
+        btn.innerHTML = iconCheck;
+        setTimeout(() => {
+          btn.innerHTML = iconCopy;
+        }, 2000);
+      }
+    });
+  });
+</script>

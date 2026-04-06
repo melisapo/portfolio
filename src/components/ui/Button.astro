@@ -1,14 +1,20 @@
 ---
-interface Props {
-  id: string;
-}
 
-const id = Astro.props;
 ---
 
 <button
-  id={id}
-  class="pixel-border border-sand/60 bg-petal hover:bg-petal/90 cursor-pointer border-t-4 px-8 py-1.5 font-mono text-4xl text-white hover:scale-105 active:scale-95"
+  class="dw-cv pixel-border border-sand/60 bg-petal hover:bg-petal/90 cursor-pointer border-t-4 px-8 py-1.5 font-mono text-4xl text-white hover:scale-105 active:scale-95"
 >
   <slot />
 </button>
+
+<script>
+  document.querySelectorAll(".dw-cv").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const a = document.createElement("a");
+      a.href = "/cv.pdf";
+      a.download = "Melissa Gutierrez - Software Developer.pdf";
+      a.click();
+    });
+  });
+</script>
