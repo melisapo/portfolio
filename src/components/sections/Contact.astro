@@ -1,5 +1,9 @@
 ---
-import Button from "../ui/Button.astro";
+import github from "@/assets/contact/github.png";
+import linkedin from "@/assets/contact/linkedin.png";
+import tg from "@/assets/contact/tg.png";
+
+import Button from "@/components/ui/Button.astro";
 ---
 
 <div
@@ -46,7 +50,7 @@ import Button from "../ui/Button.astro";
         target="_blank"
         class="flex flex-col items-center"
       >
-        <img src="/contact/github.png" alt="" class="w-16 cursor-pointer" />
+        <img src={github.src} alt="" class="w-16 cursor-pointer" />
         GitHub
       </a>
       <a
@@ -54,7 +58,7 @@ import Button from "../ui/Button.astro";
         target="_blank"
         class="flex flex-col items-center"
       >
-        <img src="/contact/linkedin.png" alt="" class="w-16 cursor-pointer" />
+        <img src={linkedin.src} alt="" class="w-16 cursor-pointer" />
         LinkedIn
       </a>
       <a
@@ -62,7 +66,7 @@ import Button from "../ui/Button.astro";
         target="_blank"
         class="flex flex-col items-center pb-4"
       >
-        <img src="/contact/tg.png" alt="" class="w-16 cursor-pointer" />
+        <img src={tg.src} alt="" class="w-16 cursor-pointer" />
         Telegram
       </a>
     </div>

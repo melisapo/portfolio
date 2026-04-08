@@ -14,7 +14,7 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
 <div
   class="project-card text-wine font-display flex max-w-[500px] flex-col gap-4"
 >
-  <img src={image} alt={title} class="pixel-border-nm w-full" />
+  <img src={image.src} alt={title} class="pixel-border-nm w-full" />
 
   <div class="flex items-center justify-between">
     <h2 class="font-mono text-2xl md:text-4xl">{title}</h2>

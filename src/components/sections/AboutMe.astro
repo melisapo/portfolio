@@ -1,5 +1,7 @@
 ---
-import Button from "../ui/Button.astro";
+import me from "@/assets/me.png";
+
+import Button from "@/components/ui/Button.astro";
 ---
 
 <div
@@ -13,7 +15,7 @@ import Button from "../ui/Button.astro";
       </p>
     </div>
     <img
-      src="./me.png"
+      src={me.src}
       alt="profile pic"
       class="hidden w-30 rounded-full sm:w-50"
     />

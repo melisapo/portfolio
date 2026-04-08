@@ -1,12 +1,18 @@
 ---
-import ProjectCard from "../ui/ProjectCard.astro";
+import pixelAvatar from "@/assets/project-shots/pixel-avatar.webp";
+import flea from "@/assets/project-shots/flea.webp";
+import icons from "@/assets/project-shots/icons.webp";
+
+import arrow from "@/assets/decorations/project-arrow.png";
+
+import ProjectCard from "@/components/ui/ProjectCard.astro";
 
 const projects = [
   {
     title: "Pixel Avatar",
     description:
       "It is a free and simple microservice to create avatars based on any text input. Its main purpose is to serve as a fallback image or default avatar in web applications, especially useful when a user hasn't uploaded their own photo.",
-    image: "/project-shots/pixel-avatar.webp",
+    image: { pixelAvatar },
     techs: ["C#", "ASP.NET Core", "WebComponents", "TailwindCSS"],
     projectUrl: "https://pixelavatar.onrender.com",
     repoUrl: "https://github.com/melisapo/pixel-avatar-api",
@@ -15,7 +21,7 @@ const projects = [
     title: "FleaMarket",
     description:
       "It is a marketplace-style web application designed to facilitate the buying and selling of second-hand items between individuals. Its main objective is to centralize listings and enable advanced searches by categories and prices.",
-    image: "/project-shots/flea.webp",
+    image: { flea },
     techs: ["C#", "ASP.NET", "MVC", "PostgreSQL"],
     repoUrl: "https://github.com/melisapo/flea",
   },
@@ -23,7 +29,7 @@ const projects = [
     title: "Jerry's Pixel Icons",
     description:
       "A Visual Studio Code extension that replaces file explorer icons with a pixel-art style set, adding a fun and retro touch to your editor. It includes support for the most common file types and folders, with over 1k installations and growing.",
-    image: "/project-shots/icons.webp",
+    image: { icons },
     techs: ["Aseprite", "JavaScript"],
     projectUrl:
       "https://marketplace.visualstudio.com/items?itemName=MelissaGutierrez.jerrys-pixel-icons&ssr=false#overview",
@@ -48,12 +54,7 @@ const projects = [
       id="prev-btn"
       class="cursor-pointer hover:scale-110 active:scale-90"
     >
-      <img
-        src="decorations/project-arrow.png"
-        alt=""
-        class="w-12 xl:w-16"
-        role="button"
-      />
+      <img src={arrow.src} alt="" class="w-12 xl:w-16" role="button" />
     </button>
     <span id="counter" class="text-wine/90 font-mono text-xl md:text-3xl"
       >1 / {projects.length}</span
@@ -64,7 +65,7 @@ const projects = [
     >
       <img
         alt="→"
-        src="decorations/project-arrow.png"
+        src={arrow.src}
         class="w-12 rotate-180 xl:w-16"
         role="button"
       />

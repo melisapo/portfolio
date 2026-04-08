@@ -12,8 +12,6 @@ import btn from "@/assets/app/btn.png";
 import mug from "@/assets/app/mug.png";
 import bug from "@/assets/app/bug.png";
 import gif from "@/assets/hola.gif";
-
-import { Image } from "astro:assets";
 ---
 
 <div class="desktop grid h-screen place-items-center px-2 pb-10 2xl:p-10">
@@ -45,24 +43,24 @@ import { Image } from "astro:assets";
       class="icons fixed bottom-16 order-2 grid grid-cols-4 gap-12 py-4 2xl:static 2xl:order-1 2xl:w-auto 2xl:grid-cols-2 2xl:gap-6"
     >
       <AppIcon label="about me" target="window-about">
-        <Image src={berry} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img src={berry.src} alt="" class="cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="projects" target="window-projects">
-        <Image src={btn} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img src={btn.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="skills" target="window-skills">
-        <Image src={mug} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img src={mug.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="contact" target="window-contact">
-        <Image src={bug} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img src={bug.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <!-- gif solo en desktop -->
       <div class="top-4 left-2 hidden h-64 w-64 overflow-hidden p-2 2xl:flex">
-        <Image src={gif} alt="GIF" class="h-full w-full object-cover" />
+        <img src={gif.src} alt="GIF" class="h-full w-full object-cover" />
       </div>
     </div>
   </div>

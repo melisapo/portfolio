@@ -1,4 +1,6 @@
 ---
+import close from "@/assets/decorations/close.png";
+
 interface Props {
   title: string;
   id: string;
@@ -20,11 +22,7 @@ const { title, id } = Astro.props;
       class="close-btn cursor-pointer hover:scale-110 active:scale-90"
       data-target={id}
     >
-      <img
-        src="/decorations/close.png"
-        class="w-8 cursor-pointer md:w-12"
-        alt="close-btn"
-      />
+      <img src={close.src} class="w-8 cursor-pointer md:w-12" alt="close-btn" />
     </button>
   </div>
   <div>
