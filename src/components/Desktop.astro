@@ -1,13 +1,19 @@
 ---
-import AppIcon from "./AppIcon.astro";
-import Window from "./Window.astro";
-import AboutMe from "./sections/AboutMe.astro";
-import Projects from "./sections/Projects.astro";
-import Skills from "./sections/Skills.astro";
-import Contact from "./sections/Contact.astro";
-import Clock from "./ui/Clock.astro";
+import AppIcon from "@/components/AppIcon.astro";
+import Window from "@/components/Window.astro";
+import AboutMe from "@/components/sections/AboutMe.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Contact from "@/components/sections/Contact.astro";
+import Clock from "@/components/ui/Clock.astro";
 
-import Berry form "../public/app/berry.png";
+import berry from "@/assets/app/berry.png";
+import btn from "@/assets/app/btn.png";
+import mug from "@/assets/app/mug.png";
+import bug from "@/assets/app/bug.png";
+import gif from "@/assets/hola.gif";
+
+import { Image } from "astro:assets";
 ---
 
 <div class="desktop grid h-screen place-items-center px-2 pb-10 2xl:p-10">
@@ -39,24 +45,24 @@ import Berry form "../public/app/berry.png";
       class="icons fixed bottom-16 order-2 grid grid-cols-4 gap-12 py-4 2xl:static 2xl:order-1 2xl:w-auto 2xl:grid-cols-2 2xl:gap-6"
     >
       <AppIcon label="about me" target="window-about">
-        <img src="/app/berry.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <Image src={berry} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="projects" target="window-projects">
-        <img src="/app/btn.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <Image src={btn} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="skills" target="window-skills">
-        <img src="/app/mug.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <Image src={mug} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="contact" target="window-contact">
-        <img src="/app/bug.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <Image src={bug} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <!-- gif solo en desktop -->
       <div class="top-4 left-2 hidden h-64 w-64 overflow-hidden p-2 2xl:flex">
-        <img src="./hola.gif" alt="GIF" class="h-full w-full object-cover" />
+        <Image src={gif} alt="GIF" class="h-full w-full object-cover" />
       </div>
     </div>
   </div>

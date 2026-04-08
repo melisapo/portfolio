@@ -41,7 +41,7 @@
 
 body,
 * {
-  cursor: url("cursors/cursor.png"), auto;
+  cursor: url("@/assets/cursors/cursor.png"), auto;
 }
 a,
 button,
@@ -49,7 +49,7 @@ button,
 input[type="submit"],
 .cust-pointer,
 .cursor-pointer {
-  cursor: url("cursors/cursor-pointer.png"), pointer;
+  cursor: url("@/assets/cursors/cursor-pointer.png"), pointer;
 }
 
 .pixel-border {
@@ -88,11 +88,11 @@ input[type="submit"],
 }
 
 .pixel-bg-squares {
-  background-image: url(decorations/grid.png);
+  background-image: url(@/assets/decorations/grid.png);
   background-repeat: repeat;
 }
 .pixel-bg-stars {
-  background-image: url(decorations/star-pattern.png);
+  background-image: url(@/assets/decorations/star-pattern.png);
   background-repeat: repeat;
 }
 
