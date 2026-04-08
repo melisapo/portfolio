@@ -8,7 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://tu-usuario.github.io",
-  base: "/nombre-del-repo",
+  site: "https://melisapo.github.io",
+  base: "/portfolio",
 });
 
