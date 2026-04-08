@@ -6,43 +6,35 @@ import AboutMe from "./sections/AboutMe.astro";
 import Projects from "./sections/Projects.astro";
 import Skills from "./sections/Skills.astro";
 import Contact from "./sections/Contact.astro";
-
-import Berry from "./icons/app/Berry.astro";
-import Btn from "./icons/app/Btn.astro";
-import Bug from "./icons/app/Bug.astro";
-import Mug from "./icons/app/Mug.astro";
 ---
 
-<div class="desktop flex h-screen items-center justify-between overflow-hidden">
+<div
+  class="desktop flex h-screen flex-col-reverse items-center p-6 2xl:flex-row 2xl:gap-20 2xl:p-0"
+>
   <!-- iconos del escritorio -->
-  <div class="flex flex-col">
-    <div class="icons my-auto grid w-fit grid-cols-2 gap-6 p-12">
-      <AppIcon label="about me" target="window-about">
-        <Berry size="100" />
-      </AppIcon>
+  <div
+    class="icons my-auto grid w-fit grid-cols-4 gap-4 p-6 pb-18 2xl:max-w-100 2xl:grid-cols-2 2xl:pb-0"
+  >
+    <AppIcon label="about me" target="window-about">
+      <img src="/app/berry.png" alt="" class="w-36" />
+    </AppIcon>
 
-      <AppIcon label="projects" target="window-projects">
-        <Btn size="100" />
-      </AppIcon>
+    <AppIcon label="projects" target="window-projects">
+      <img src="/app/btn.png" alt="" class="w-36 cursor-pointer" />
+    </AppIcon>
 
-      <AppIcon label="skills" target="window-skills">
-        <Mug size="100" />
-      </AppIcon>
+    <AppIcon label="skills" target="window-skills">
+      <img src="/app/mug.png" alt="" class="w-36" />
+    </AppIcon>
 
-      <AppIcon label="contact" target="window-contact">
-        <Bug size="100" />
-      </AppIcon>
-    </div>
-    <div class="group relative h-64 w-64 overflow-hidden">
-      <img
-        src="./hola-static.png"
-        alt="GIF"
-        class="h-full w-full object-cover group-hover:hidden"
-      />
+    <AppIcon label="contact" target="window-contact">
+      <img src="/app/bug.png" alt="" class="w-36" />
+    </AppIcon>
+    <div class="group relative hidden h-64 w-64 overflow-hidden p-4 2xl:flex">
       <img
         src="./hola.gif"
         alt="GIF"
-        class="hidden h-full w-full object-cover group-hover:block"
+        class="gif-hover h-full w-full object-cover"
       />
     </div>
   </div>
@@ -65,25 +57,25 @@ import Mug from "./icons/app/Mug.astro";
       <Contact />
     </Window>
   </div>
+
+  <script>
+    document.getElementById("window-about")?.classList.remove("hidden");
+
+    const allWindows = () => document.querySelectorAll(".window");
+
+    document.querySelectorAll(".app-icon").forEach((icon) => {
+      icon.addEventListener("click", () => {
+        const target = icon.getAttribute("data-target");
+        allWindows().forEach((w) => w.classList.add("hidden"));
+        document.getElementById(target)?.classList.remove("hidden");
+      });
+    });
+
+    document.querySelectorAll(".close-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        document.getElementById(target)?.classList.add("hidden");
+      });
+    });
+  </script>
 </div>
-
-<script>
-  document.getElementById("window-about")?.classList.remove("hidden");
-
-  const allWindows = () => document.querySelectorAll(".window");
-
-  document.querySelectorAll(".app-icon").forEach((icon) => {
-    icon.addEventListener("click", () => {
-      const target = icon.getAttribute("data-target");
-      allWindows().forEach((w) => w.classList.add("hidden"));
-      document.getElementById(target)?.classList.remove("hidden");
-    });
-  });
-
-  document.querySelectorAll(".close-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-target");
-      document.getElementById(target)?.classList.add("hidden");
-    });
-  });
-</script>

@@ -12,7 +12,7 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
 ---
 
 <div
-  class="project-card text-wine font-display flex h-[400px] max-w-[500px] flex-col gap-4 pt-4"
+  class="project-card text-wine font-display flex max-w-[500px] flex-col gap-4 pt-4"
 >
   <img src={image} alt={title} class="pixel-border h-85 w-full" />
 
@@ -30,7 +30,7 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
   </div>
 
   <div class="flex items-center justify-between">
-    <p class="text-wine/90 font-medium">{description}</p>
+    <p class="text-wine/90 text-lg font-medium">{description}</p>
 
     <div class="mt-auto flex justify-end gap-3">
       {

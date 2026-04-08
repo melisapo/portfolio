@@ -47,7 +47,8 @@ a,
 button,
 [role="button"],
 input[type="submit"],
-.cust-pointer {
+.cust-pointer,
+.cursor-pointer {
   cursor: url("cursors/cursor-pointer.png"), pointer;
 }
 
@@ -82,7 +83,7 @@ input[type="submit"],
   background-color: #fff5d9;
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='21' viewBox='0 0 100 20'%3E%3Crect x='0' y='14' width='100%25' height='2' fill='rgba(123,181,31,0.3)'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%50' height='100%50' viewBox='0 0 100 100'%3E%3Cline x1='16' y1='0' x2='16' y2='100' stroke='rgba(255,66,135,0.5)' stroke-width='1.5'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%50' height='100%50' viewBox='0 0 100 100'%3E%3Cline x1='10' y1='0' x2='10' y2='100' stroke='rgba(255,66,135,0.3)' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat: repeat, repeat-y;
 }
 
