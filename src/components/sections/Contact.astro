@@ -1,94 +1,72 @@
 ---
 import Button from "../ui/Button.astro";
-import GithubIcon from "../icons/contact/GitHub.astro";
-import LinkedInIcon from "../icons/contact/LinkedIn.astro";
-import TelegramIcon from "../icons/contact/Telegram.astro";
 ---
 
 <div
-  class="pixel-bg-squares bg-cream/30 text-wine grid w-full place-items-center p-10 bg-blend-soft-light"
+  class="text-wine pixel-bg-squares bg-cream/30 grid w-full place-items-center bg-blend-soft-light sm:px-20 sm:py-18"
 >
   <div
-    class="bg-cream pixel-border flex flex-col items-center justify-center gap-2 px-20 py-10"
+    class="bg-cream pixel-border-nm flex flex-col items-center justify-center gap-2 gap-8 px-20 py-14"
   >
     <h2
-      class="border-wine/50 w-full border-b-3 border-dashed pb-2 text-center font-mono text-5xl"
+      class="border-wine/60 border-b-4 border-dashed text-center font-mono text-4xl md:text-5xl"
     >
       How to reach me:
     </h2>
-
-    <div class="flex flex-col items-center justify-evenly gap-6 pt-10">
-      <!-- COPY EMAIL -->
-      <div
-        class="pixel-border font-display bg-sand flex items-center gap-12 text-xl font-semibold"
+    <div
+      class="pixel-border-nm font-display bg-sand flex items-center gap-6 font-semibold md:gap-18 md:text-xl"
+    >
+      <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
+      <button
+        id="copy-email"
+        class="bg-wine text-sand pixel-border-nm scale-110 cursor-pointer p-1 hover:scale-120 active:scale-100"
       >
-        <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
-        <button
-          id="copy-email"
-          class="bg-wine text-sand pixel-border-nm scale-110 cursor-pointer p-1 hover:scale-120 active:scale-100"
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          class="cust-pointer"
+          ><path
+            fill="currentColor"
+            d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"
+          ></path></svg
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            class="cust-pointer"
-            ><path
-              fill="currentColor"
-              d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"
-            ></path></svg
-          >
-        </button>
-      </div>
-      <p class="mt-2 font-mono text-4xl">You can find me here:</p>
-
-      <!-- TEKNOLOYIA -->
-      <div class="flex items-center gap-10 py-2">
-        <div
-          class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
-        >
-          <a
-            href="https://github.com/melisapo"
-            class="cursor-pointer hover:scale-110 active:scale-90"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <GithubIcon size="50" />
-          </a>
-          <p>GitHub</p>
-        </div>
-        <div
-          class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
-        >
-          <a
-            href="https://www.linkedin.com/in/melisapo"
-            class="cursor-pointer hover:scale-110 active:scale-90"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <LinkedInIcon size="50" />
-          </a>
-          <p>LinkedIn</p>
-        </div>
-        <div
-          class="flex flex-col items-center justify-center gap-2 font-mono text-3xl"
-        >
-          <a
-            href="https://t.me/melisapo"
-            class="cursor-pointer hover:scale-110 active:scale-90"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <TelegramIcon size="50" />
-          </a>
-          <p>Telegram</p>
-        </div>
-      </div>
-
-      <Button>
-        <p class="cust-pointer">Download CV</p>
-      </Button>
+      </button>
     </div>
+
+    <h3 class="text-center font-mono text-3xl md:text-4xl">
+      You can find me here:
+    </h3>
+    <div
+      class="border-wine/60 flex items-center gap-8 border-b-4 border-dashed font-mono text-2xl sm:gap-12 md:text-3xl"
+    >
+      <a
+        href="https://github.com/melisapo"
+        target="_blank"
+        class="flex flex-col items-center"
+      >
+        <img src="/contact/github.png" alt="" class="w-16 cursor-pointer" />
+        GitHub
+      </a>
+      <a
+        href="https://linkedin.com/in/melisapo"
+        target="_blank"
+        class="flex flex-col items-center"
+      >
+        <img src="/contact/linkedin.png" alt="" class="w-16 cursor-pointer" />
+        LinkedIn
+      </a>
+      <a
+        href="https://t.me/melisapo"
+        target="_blank"
+        class="flex flex-col items-center pb-4"
+      >
+        <img src="/contact/tg.png" alt="" class="w-16 cursor-pointer" />
+        Telegram
+      </a>
+    </div>
+    <Button>Download CV</Button>
   </div>
 </div>
 

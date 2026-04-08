@@ -5,14 +5,16 @@ import AboutMe from "./sections/AboutMe.astro";
 import Projects from "./sections/Projects.astro";
 import Skills from "./sections/Skills.astro";
 import Contact from "./sections/Contact.astro";
+import Clock from "./ui/Clock.astro";
 ---
 
-<div class="desktop grid place-items-center px-2 pb-10 2xl:p-10">
+<div class="desktop grid h-screen place-items-center px-2 pb-10 2xl:p-10">
   <div
-    class="mx-auto my-auto flex h-screen flex-col items-center justify-center 2xl:static 2xl:flex-row 2xl:gap-20"
+    class="mx-auto my-auto flex flex-col items-center justify-center 2xl:static 2xl:flex-row 2xl:gap-20"
   >
     <!-- ventanas -->
     <div class="order-1 w-full p-4 2xl:order-2">
+      <Clock />
       <Window id="window-about" title="about me.">
         <AboutMe />
       </Window>
@@ -21,7 +23,7 @@ import Contact from "./sections/Contact.astro";
         <Projects />
       </Window>
 
-      <Window id="window-skills" title="skills, languages and technologies.">
+      <Window id="window-skills" title="languages and technologies.">
         <Skills />
       </Window>
 
@@ -51,9 +53,7 @@ import Contact from "./sections/Contact.astro";
       </AppIcon>
 
       <!-- gif solo en desktop -->
-      <div
-        class="center fixed top-4 left-2 h-32 w-32 overflow-hidden p-2 2xl:static 2xl:h-64 2xl:w-64"
-      >
+      <div class="top-4 left-2 hidden h-64 w-64 overflow-hidden p-2 2xl:flex">
         <img src="./hola.gif" alt="GIF" class="h-full w-full object-cover" />
       </div>
     </div>
@@ -73,6 +73,7 @@ import Contact from "./sections/Contact.astro";
       btn.addEventListener("click", () => {
         const target = btn.getAttribute("data-target");
         document.getElementById(target)?.classList.add("hidden");
+        document.getElementById("clock")?.classList.remove("hidden");
       });
     });
   </script>

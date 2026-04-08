@@ -1,0 +1,36 @@
+<div
+  id="clock"
+  class="text-wine window pixel-border flex hidden flex-col items-center justify-start bg-[#d5df7a] p-8 font-mono"
+>
+  <div id="time" class="text-center text-6xl leading-none md:text-8xl"></div>
+  <div
+    id="date"
+    class="mt-2 text-center text-4xl capitalize opacity-70 md:text-6xl"
+  >
+  </div>
+</div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    const time = now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    const date = now.toLocaleDateString([], {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    document.getElementById("time").textContent = time;
+    document.getElementById("date").textContent = date;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
