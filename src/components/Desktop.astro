@@ -1,68 +1,67 @@
 ---
 import AppIcon from "./AppIcon.astro";
 import Window from "./Window.astro";
-
 import AboutMe from "./sections/AboutMe.astro";
 import Projects from "./sections/Projects.astro";
 import Skills from "./sections/Skills.astro";
 import Contact from "./sections/Contact.astro";
 ---
 
-<div
-  class="desktop flex h-screen flex-col-reverse items-center p-6 2xl:flex-row 2xl:gap-20 2xl:p-0"
->
-  <!-- iconos del escritorio -->
+<div class="desktop grid place-items-center px-2 pb-10 2xl:p-10">
   <div
-    class="icons my-auto grid w-fit grid-cols-4 gap-4 p-6 pb-18 2xl:max-w-100 2xl:grid-cols-2 2xl:pb-0"
+    class="mx-auto my-auto flex h-screen flex-col items-center justify-center 2xl:static 2xl:flex-row 2xl:gap-20"
   >
-    <AppIcon label="about me" target="window-about">
-      <img src="/app/berry.png" alt="" class="w-36" />
-    </AppIcon>
+    <!-- ventanas -->
+    <div class="order-1 w-full p-4 2xl:order-2">
+      <Window id="window-about" title="about me.">
+        <AboutMe />
+      </Window>
 
-    <AppIcon label="projects" target="window-projects">
-      <img src="/app/btn.png" alt="" class="w-36 cursor-pointer" />
-    </AppIcon>
+      <Window id="window-projects" title="my projects and experience.">
+        <Projects />
+      </Window>
 
-    <AppIcon label="skills" target="window-skills">
-      <img src="/app/mug.png" alt="" class="w-36" />
-    </AppIcon>
+      <Window id="window-skills" title="skills, languages and technologies.">
+        <Skills />
+      </Window>
 
-    <AppIcon label="contact" target="window-contact">
-      <img src="/app/bug.png" alt="" class="w-36" />
-    </AppIcon>
-    <div class="group relative hidden h-64 w-64 overflow-hidden p-4 2xl:flex">
-      <img
-        src="./hola.gif"
-        alt="GIF"
-        class="gif-hover h-full w-full object-cover"
-      />
+      <Window id="window-contact" title="contact me.">
+        <Contact />
+      </Window>
     </div>
-  </div>
 
-  <!-- ventanas -->
-  <div class="my-auto w-fit">
-    <Window id="window-about" title="about me.">
-      <AboutMe />
-    </Window>
+    <!-- iconos -->
+    <div
+      class="icons fixed bottom-16 order-2 grid grid-cols-4 gap-12 py-4 2xl:static 2xl:order-1 2xl:w-auto 2xl:grid-cols-2 2xl:gap-6"
+    >
+      <AppIcon label="about me" target="window-about">
+        <img src="/app/berry.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+      </AppIcon>
 
-    <Window id="window-projects" title="my projects and experience.">
-      <Projects />
-    </Window>
+      <AppIcon label="projects" target="window-projects">
+        <img src="/app/btn.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+      </AppIcon>
 
-    <Window id="window-skills" title="skills, languages and technologies.">
-      <Skills />
-    </Window>
+      <AppIcon label="skills" target="window-skills">
+        <img src="/app/mug.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+      </AppIcon>
 
-    <Window id="window-contact" title="contact me.">
-      <Contact />
-    </Window>
+      <AppIcon label="contact" target="window-contact">
+        <img src="/app/bug.png" alt="" class="w-20 cursor-pointer 2xl:w-28" />
+      </AppIcon>
+
+      <!-- gif solo en desktop -->
+      <div
+        class="center fixed top-4 left-2 h-32 w-32 overflow-hidden p-2 2xl:static 2xl:h-64 2xl:w-64"
+      >
+        <img src="./hola.gif" alt="GIF" class="h-full w-full object-cover" />
+      </div>
+    </div>
   </div>
 
   <script>
     document.getElementById("window-about")?.classList.remove("hidden");
-
     const allWindows = () => document.querySelectorAll(".window");
-
     document.querySelectorAll(".app-icon").forEach((icon) => {
       icon.addEventListener("click", () => {
         const target = icon.getAttribute("data-target");
@@ -70,7 +69,6 @@ import Contact from "./sections/Contact.astro";
         document.getElementById(target)?.classList.remove("hidden");
       });
     });
-
     document.querySelectorAll(".close-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const target = btn.getAttribute("data-target");

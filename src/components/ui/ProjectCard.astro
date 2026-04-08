@@ -12,16 +12,16 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
 ---
 
 <div
-  class="project-card text-wine font-display flex max-w-[500px] flex-col gap-4 pt-4"
+  class="project-card text-wine font-display flex max-w-[500px] flex-col gap-4"
 >
-  <img src={image} alt={title} class="pixel-border h-85 w-full" />
+  <img src={image} alt={title} class="pixel-border-nm w-full" />
 
   <div class="flex items-center justify-between">
-    <h2 class="font-mono text-4xl">{title}</h2>
-    <div class="flex flex-wrap gap-2">
+    <h2 class="font-mono text-2xl md:text-4xl">{title}</h2>
+    <div class="flex flex-wrap justify-end gap-2">
       {
         techs.map((tech) => (
-          <span class="pixel-border-petal bg-petal px-2 py-1 text-sm font-semibold text-white">
+          <span class="pixel-border-petal bg-petal px-2 py-1 text-xs font-semibold text-white md:text-sm">
             {tech}
           </span>
         ))
@@ -30,7 +30,7 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
   </div>
 
   <div class="flex items-center justify-between">
-    <p class="text-wine/90 text-lg font-medium">{description}</p>
+    <p class="text-wine/90 font-medium md:text-lg">{description}</p>
 
     <div class="mt-auto flex justify-end gap-3">
       {

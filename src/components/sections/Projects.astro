@@ -32,7 +32,7 @@ const projects = [
 ];
 ---
 
-<div class="jutify-between flex w-full flex-col items-center px-8 pb-8">
+<div class="jutify-between flex w-full flex-col items-center p-4 md:p-8">
   <div>
     {
       projects.map((project, i) => (
@@ -43,7 +43,7 @@ const projects = [
     }
   </div>
 
-  <div class="flex w-full items-end justify-between">
+  <div class="flex w-full items-end justify-between pt-6">
     <button
       id="prev-btn"
       class="cursor-pointer hover:scale-110 active:scale-90"
@@ -51,11 +51,11 @@ const projects = [
       <img
         src="decorations/project-arrow.png"
         alt=""
-        class="h-16 w-16"
+        class="w-12 xl:w-16"
         role="button"
       />
     </button>
-    <span id="counter" class="text-wine/90 font-mono text-3xl"
+    <span id="counter" class="text-wine/90 font-mono text-xl md:text-3xl"
       >1 / {projects.length}</span
     >
     <button
@@ -65,7 +65,7 @@ const projects = [
       <img
         alt="→"
         src="decorations/project-arrow.png"
-        class="h-16 w-16 rotate-180"
+        class="w-12 rotate-180 xl:w-16"
         role="button"
       />
     </button>
