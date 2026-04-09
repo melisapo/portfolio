@@ -1,12 +1,22 @@
+---
+import gif from "@/assets/hola.gif";
+---
+
 <div
   id="clock"
-  class="text-wine window pixel-border flex hidden flex-col items-center justify-start bg-[#d5df7a] p-8 font-mono"
+  class="text-wine window flex hidden flex-col items-center justify-start gap-8 font-mono"
 >
-  <div id="time" class="text-center text-6xl leading-none md:text-8xl"></div>
-  <div
-    id="date"
-    class="mt-2 text-center text-4xl capitalize opacity-70 md:text-6xl"
-  >
+  <div class="pixel-border bg-[#d5df7a] p-4">
+    <div id="time" class="text-center text-4xl leading-none md:text-6xl"></div>
+    <div
+      id="date"
+      class="mt-2 text-center text-2xl capitalize opacity-70 md:text-4xl"
+    >
+    </div>
+  </div>
+  <!-- gif`` solo en desktop -->
+  <div class="w-40 overflow-hidden p-2 md:w-64">
+    <img src={gif.src} alt="GIF" class="h-full w-full object-cover" />
   </div>
 </div>
 

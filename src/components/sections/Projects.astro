@@ -12,7 +12,7 @@ const projects = [
     title: "Pixel Avatar",
     description:
       "It is a free and simple microservice to create avatars based on any text input. Its main purpose is to serve as a fallback image or default avatar in web applications, especially useful when a user hasn't uploaded their own photo.",
-    image: { pixelAvatar },
+    image: pixelAvatar,
     techs: ["C#", "ASP.NET Core", "WebComponents", "TailwindCSS"],
     projectUrl: "https://pixelavatar.onrender.com",
     repoUrl: "https://github.com/melisapo/pixel-avatar-api",
@@ -21,7 +21,7 @@ const projects = [
     title: "FleaMarket",
     description:
       "It is a marketplace-style web application designed to facilitate the buying and selling of second-hand items between individuals. Its main objective is to centralize listings and enable advanced searches by categories and prices.",
-    image: { flea },
+    image: flea,
     techs: ["C#", "ASP.NET", "MVC", "PostgreSQL"],
     repoUrl: "https://github.com/melisapo/flea",
   },
@@ -29,7 +29,7 @@ const projects = [
     title: "Jerry's Pixel Icons",
     description:
       "A Visual Studio Code extension that replaces file explorer icons with a pixel-art style set, adding a fun and retro touch to your editor. It includes support for the most common file types and folders, with over 1k installations and growing.",
-    image: { icons },
+    image: icons,
     techs: ["Aseprite", "JavaScript"],
     projectUrl:
       "https://marketplace.visualstudio.com/items?itemName=MelissaGutierrez.jerrys-pixel-icons&ssr=false#overview",
@@ -38,7 +38,7 @@ const projects = [
 ];
 ---
 
-<div class="jutify-between flex w-full flex-col items-center p-4 md:p-8">
+<div class="jutify-between flex w-full flex-col items-center p-3 md:p-6">
   <div>
     {
       projects.map((project, i) => (
@@ -49,14 +49,14 @@ const projects = [
     }
   </div>
 
-  <div class="flex w-full items-end justify-between pt-6">
+  <div class="flex w-full items-end justify-between pt-3 2xl:pt-6">
     <button
       id="prev-btn"
       class="cursor-pointer hover:scale-110 active:scale-90"
     >
-      <img src={arrow.src} alt="" class="w-12 xl:w-16" role="button" />
+      <img src={arrow.src} alt="" class="w-10 xl:w-14" role="button" />
     </button>
-    <span id="counter" class="text-wine/90 font-mono text-xl md:text-3xl"
+    <span id="counter" class="text-wine/80 font-mono font-semibold md:text-xl"
       >1 / {projects.length}</span
     >
     <button
@@ -66,7 +66,7 @@ const projects = [
       <img
         alt="→"
         src={arrow.src}
-        class="w-12 rotate-180 xl:w-16"
+        class="w-10 rotate-180 xl:w-14"
         role="button"
       />
     </button>

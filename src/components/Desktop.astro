@@ -14,12 +14,12 @@ import bug from "@/assets/app/bug.png";
 import gif from "@/assets/hola.gif";
 ---
 
-<div class="desktop grid h-screen place-items-center px-2 pb-10 2xl:p-10">
-  <div
-    class="mx-auto my-auto flex flex-col items-center justify-center 2xl:static 2xl:flex-row 2xl:gap-20"
-  >
+<div
+  class="desktop center relative grid h-screen place-items-center px-2 pb-10 2xl:p-10"
+>
+  <div class="flex flex-col items-center justify-center 2xl:flex-row">
     <!-- ventanas -->
-    <div class="order-1 w-full p-4 2xl:order-2">
+    <div class="order-1 mx-auto my-auto w-full p-4 2xl:order-2">
       <Clock />
       <Window id="window-about" title="about me.">
         <AboutMe />
@@ -40,10 +40,10 @@ import gif from "@/assets/hola.gif";
 
     <!-- iconos -->
     <div
-      class="icons fixed bottom-16 order-2 grid grid-cols-4 gap-12 py-4 2xl:static 2xl:order-1 2xl:w-auto 2xl:grid-cols-2 2xl:gap-6"
+      class="icons absolute fixed bottom-6 order-2 grid grid-cols-4 gap-12 py-4 md:bottom-10 2xl:top-20 2xl:bottom-20 2xl:left-30 2xl:order-1 2xl:grid-cols-1 2xl:gap-6"
     >
       <AppIcon label="about me" target="window-about">
-        <img src={berry.src} alt="" class="cursor-pointer 2xl:w-28" />
+        <img src={berry.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
 
       <AppIcon label="projects" target="window-projects">
@@ -57,11 +57,6 @@ import gif from "@/assets/hola.gif";
       <AppIcon label="contact" target="window-contact">
         <img src={bug.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
       </AppIcon>
-
-      <!-- gif solo en desktop -->
-      <div class="top-4 left-2 hidden h-64 w-64 overflow-hidden p-2 2xl:flex">
-        <img src={gif.src} alt="GIF" class="h-full w-full object-cover" />
-      </div>
     </div>
   </div>
 

@@ -7,79 +7,75 @@ import Button from "@/components/ui/Button.astro";
 ---
 
 <div
-  class="text-wine pixel-bg-squares bg-cream/30 grid w-full place-items-center bg-blend-soft-light sm:px-16 sm:py-12"
+  class="bg-cream text-wine flex flex-col items-center justify-center gap-4 px-14 py-8 md:gap-8 md:px-20"
 >
-  <div
-    class="bg-cream pixel-border-nm flex flex-col items-center justify-center gap-2 gap-8 px-20 py-14"
+  <h2
+    class="border-wine/60 border-b-3 border-dashed text-center font-mono text-3xl md:text-5xl"
   >
-    <h2
-      class="border-wine/60 border-b-3 border-dashed text-center font-mono text-4xl md:text-5xl"
+    How to reach me:
+  </h2>
+  <div
+    class="pixel-border-nm font-display bg-sand flex items-center gap-6 font-semibold md:gap-18 md:text-xl"
+  >
+    <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
+    <button
+      id="copy-email"
+      class="bg-wine text-sand pixel-border-nm scale-110 cursor-pointer p-1 hover:scale-120 active:scale-100"
     >
-      How to reach me:
-    </h2>
-    <div
-      class="pixel-border-nm font-display bg-sand flex items-center gap-6 font-semibold md:gap-18 md:text-xl"
-    >
-      <p class="text-wine/80 pl-3">melissagh3009@gmail.com</p>
-      <button
-        id="copy-email"
-        class="bg-wine text-sand pixel-border-nm scale-110 cursor-pointer p-1 hover:scale-120 active:scale-100"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        class="cust-pointer"
+        ><path
+          fill="currentColor"
+          d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"
+        ></path></svg
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          class="cust-pointer"
-          ><path
-            fill="currentColor"
-            d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"
-          ></path></svg
-        >
-      </button>
-    </div>
-
-    <h3 class="text-center font-mono text-3xl md:text-4xl">
-      You can find me here:
-    </h3>
-    <div
-      class="border-wine/60 flex items-center gap-8 border-b-3 border-dashed font-mono text-2xl sm:gap-12 md:text-3xl"
-    >
-      <a
-        href="https://github.com/melisapo"
-        target="_blank"
-        class="flex flex-col items-center"
-      >
-        <img src={github.src} alt="" class="w-16 cursor-pointer" />
-        GitHub
-      </a>
-      <a
-        href="https://linkedin.com/in/melisapo"
-        target="_blank"
-        class="flex flex-col items-center"
-      >
-        <img src={linkedin.src} alt="" class="w-16 cursor-pointer" />
-        LinkedIn
-      </a>
-      <a
-        href="https://t.me/melisapo"
-        target="_blank"
-        class="flex flex-col items-center pb-4"
-      >
-        <img src={tg.src} alt="" class="w-16 cursor-pointer" />
-        Telegram
-      </a>
-    </div>
-    <Button>Download CV</Button>
+    </button>
   </div>
+
+  <h3 class="text-center font-mono text-2xl md:text-4xl">
+    You can find me here:
+  </h3>
+  <div
+    class="border-wine/60 flex items-center gap-8 border-b-3 border-dashed pb-2 font-mono text-2xl sm:gap-12 md:text-3xl"
+  >
+    <a
+      href="https://github.com/melisapo"
+      target="_blank"
+      class="flex flex-col items-center"
+    >
+      <img src={github.src} alt="" class="w-12 cursor-pointer md:w-16" />
+      GitHub
+    </a>
+    <a
+      href="https://linkedin.com/in/melisapo"
+      target="_blank"
+      class="flex flex-col items-center"
+    >
+      <img src={linkedin.src} alt="" class="w-12 cursor-pointer md:w-16" />
+      LinkedIn
+    </a>
+    <a
+      href="https://t.me/melisapo"
+      target="_blank"
+      class="flex flex-col items-center"
+    >
+      <img src={tg.src} alt="" class="w-12 cursor-pointer md:w-16" />
+      Telegram
+    </a>
+  </div>
+  <Button>Download CV</Button>
 </div>
 
 <script>
   const btn = document.getElementById("copy-email");
 
-  const iconCopy = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="cust-pointer"><path fill="currentColor" d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"/></svg>`;
+  const iconCopy = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="cust-pointer"><path fill="currentColor" d="M8 6h12v2H8zM4 2h12v2H4zm2 6h2v12H6zM2 4h2v12H2zm6 16h12v2H8zM20 8h2v12h-2zm-4-4h2v2h-2zM4 16h2v2H4z"/></svg>`;
 
-  const iconCheck = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18H8v-2h2zm-2-2H6v-2h2zm4-2v2h-2v-2zm-6 0H4v-2h2zm8 0h-2v-2h2zm2-2h-2v-2h2zm2-2h-2V8h2zm2-2h-2V6h2z"/></svg>`;
+  const iconCheck = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18H8v-2h2zm-2-2H6v-2h2zm4-2v2h-2v-2zm-6 0H4v-2h2zm8 0h-2v-2h2zm2-2h-2v-2h2zm2-2h-2V8h2zm2-2h-2V6h2z"/></svg>`;
 
   btn?.addEventListener("click", () => {
     navigator.clipboard.writeText("melissagh3009@gmail.com").then(() => {
