@@ -13,5 +13,5 @@ export default defineConfig({
   integrations: [sitemap()],
 
   site: "https://melisapo.github.io",
-  base: "/",
+  base: "/portfolio",
 });
