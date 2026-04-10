@@ -15,7 +15,7 @@ import gif from "@/assets/hola.gif";
 ---
 
 <div
-  class="desktop center relative grid h-screen w-screen place-items-center overflow-hidden px-2 pb-10 2xl:p-10"
+  class="desktop center grid h-dvh w-dvw place-items-center overflow-hidden px-2 pb-10 2xl:p-10"
 >
   <div class="flex flex-col items-center justify-center 2xl:flex-row">
     <!-- ventanas -->
@@ -40,22 +40,38 @@ import gif from "@/assets/hola.gif";
 
     <!-- iconos -->
     <div
-      class="icons absolute fixed bottom-1 order-2 grid grid-cols-4 gap-12 py-4 md:bottom-10 2xl:top-20 2xl:bottom-20 2xl:left-30 2xl:order-1 2xl:grid-cols-1 2xl:gap-6"
+      class="icons fixed bottom-0 order-2 grid grid-cols-4 gap-6 pb-2 md:bottom-10 2xl:top-20 2xl:bottom-20 2xl:left-30 2xl:order-1 2xl:grid-cols-1 2xl:gap-6"
     >
       <AppIcon label="about me" target="window-about">
-        <img src={berry.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img
+          src={berry.src}
+          alt=""
+          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+        />
       </AppIcon>
 
       <AppIcon label="projects" target="window-projects">
-        <img src={btn.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img
+          src={btn.src}
+          alt=""
+          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+        />
       </AppIcon>
 
       <AppIcon label="skills" target="window-skills">
-        <img src={mug.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img
+          src={mug.src}
+          alt=""
+          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+        />
       </AppIcon>
 
       <AppIcon label="contact" target="window-contact">
-        <img src={bug.src} alt="" class="w-20 cursor-pointer 2xl:w-28" />
+        <img
+          src={bug.src}
+          alt=""
+          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+        />
       </AppIcon>
     </div>
   </div>
