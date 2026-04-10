@@ -4,20 +4,22 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <BaseLayout title="404">
   <div
-    class="text-sand bg-petal selection:bg-sand/60 selection:text-wine flex h-screen w-screen items-center justify-center p-12"
+    class="text-sand bg-petal selection:bg-sand/60 selection:text-wine flex h-dvh w-dvw items-center justify-center p-6 md:p-12"
   >
     <div class="flex max-w-7xl flex-col gap-6 font-mono">
-      <span class="text-[150px]">:(</span>
+      <span class="text-6xl md:text-[150px]">:(</span>
 
-      <p class="text-7xl">404 - OH NO! You broke my website!</p>
+      <p class="text-4xl md:text-7xl">404 - OH NO! You broke my website!</p>
 
-      <div class="font-display flex flex-col gap-1 text-2xl opacity-85">
+      <div
+        class="font-display flex flex-col gap-1 text-lg opacity-85 md:text-2xl"
+      >
         <span>error code: 404_PAGE_NOT_FOUND</span>
       </div>
 
       <a
         href="/"
-        class="pixel-border-sand bg-sand text-petal w-fit px-4 py-1.5 text-4xl hover:scale-105 active:scale-95"
+        class="pixel-border-sand bg-sand text-petal w-fit px-4 py-1.5 text-xl hover:scale-105 active:scale-95 md:text-4xl"
       >
         fix it!
       </a>
