@@ -12,18 +12,17 @@ import Button from "@/components/ui/Button.astro";
   >
     <div class="flex flex-col items-center gap-2 sm:items-start md:gap-4">
       <h2 class="font-mono text-3xl md:text-6xl">Hi, my name is Melissa!</h2>
-      <p class="font-semibold md:text-lg lg:text-2xl">
-        And I am a <span class="text-petal">Software Developer</span>.
+      <p class="pb-1 font-semibold md:text-2xl">
+        And I am a <span
+          class="text-petal border-petal border-b-2 border-dashed"
+          >Software Developer</span
+        >.
       </p>
     </div>
-    <img
-      src={me.src}
-      alt="profile pic"
-      class="hidden w-30 rounded-full sm:w-50"
-    />
+    <img src={me.src} alt="profile pic" class="w-30 md:w-50" />
   </div>
   <div
-    class="pixel-bg-sheet pixel-border max-w-[650px] justify-center p-1.5 pl-3 text-sm font-medium sm:text-xl md:pl-8"
+    class="pixel-bg-sheet pixel-border max-w-[650px] justify-center p-1.5 pl-3 text-sm font-medium md:pl-8 md:text-xl"
   >
     <p>
       I am currently in my third year of Computer Engineering at the University
