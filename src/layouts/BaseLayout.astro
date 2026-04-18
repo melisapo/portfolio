@@ -4,9 +4,16 @@ import "@/styles/global.css";
 interface Props {
   title?: string;
   className?: string;
+  description: string;
+  url: string;
 }
 
-const { title = "melisapo's portfolio", className } = Astro.props;
+const {
+  title = "melisapo's portfolio",
+  className,
+  description = "Melissa Gutierrez - Software Developer: CS student from Cuba. I build tools for developers and believe good software should be simple and solve real problems. Pixel artist and baker on the side. ",
+  url = "https://melisapo.is-a.dev",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -14,6 +21,48 @@ const { title = "melisapo's portfolio", className } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffc5da" />
+    <meta property="og:logo" content="https://melisapo.is-a.dev/logo.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content="https://melisapo.is-a.dev/og.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://melisapo.is-a.dev/og.png" />
+
+    <!-- <meta -->
+    <!--   name="google-site-verification" -->
+    <!--   content="DlqDaxyzuvrH21h7xiyWu0AncQ52Ilg7iGXN_0odF0M" -->
+    <!-- /> -->
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Melissa Gutierrez",
+        "url": "https://melisapo.is-a.dev",
+        "jobTitle": "Software Developer",
+        "description": "CS student from Cuba. I build tools for developers and believe good software should be simple and solve real problems. Pixel artist and baker on the side.",
+        "image": "https://melisapo.is-a.dev/og.png",
+        "sameAs": [
+          "https://github.com/melisapo",
+          "https://linkedin.com/in/melisapo/",
+          "https://www.instagram.com/pink.mosss/"
+        ]
+      }
+    </script>
+
+    <link rel="icon" href="./favicon.ico" />
     <title>{title}</title>
   </head>
   <body class={className}>

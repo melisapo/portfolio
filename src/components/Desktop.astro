@@ -16,9 +16,13 @@ import bug from "@/assets/app/bug.png";
 <div
   class="desktop center grid h-dvh w-dvw place-items-center overflow-hidden px-2 pb-10 2xl:p-10"
 >
-  <div class="flex flex-col items-center justify-center 2xl:flex-row">
+  <div
+    class="flex flex-col items-center justify-center 2xl:flex-row landscape:flex-row"
+  >
     <!-- ventanas -->
-    <div class="order-1 mx-auto my-auto w-full p-4 2xl:order-2">
+    <div
+      class="landscape:roder-2 order-1 mx-auto my-auto w-full p-4 2xl:order-2"
+    >
       <Clock />
       <Window id="window-about" title="about me.">
         <AboutMe />
@@ -39,13 +43,13 @@ import bug from "@/assets/app/bug.png";
 
     <!-- iconos -->
     <div
-      class="icons fixed bottom-0 order-2 grid grid-cols-4 gap-6 pb-2 md:bottom-10 2xl:top-20 2xl:bottom-20 2xl:left-30 2xl:order-1 2xl:grid-cols-1 2xl:gap-6"
+      class="icons fixed bottom-0 order-2 grid grid-cols-4 gap-6 pb-2 md:bottom-10 2xl:top-20 2xl:bottom-20 2xl:left-30 2xl:order-1 2xl:grid-cols-1 2xl:gap-6 landscape:static landscape:top-auto landscape:left-auto landscape:order-1 landscape:grid-cols-1 landscape:gap-4"
     >
       <AppIcon label="about me" target="window-about">
         <img
           src={berry.src}
           alt=""
-          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+          class="w-16 cursor-pointer md:w-20 2xl:w-28 landscape:w-12"
         />
       </AppIcon>
 
@@ -53,7 +57,7 @@ import bug from "@/assets/app/bug.png";
         <img
           src={btn.src}
           alt=""
-          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+          class="w-16 cursor-pointer md:w-20 2xl:w-28 landscape:w-12"
         />
       </AppIcon>
 
@@ -61,7 +65,7 @@ import bug from "@/assets/app/bug.png";
         <img
           src={mug.src}
           alt=""
-          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+          class="w-16 cursor-pointer md:w-20 2xl:w-28 landscape:w-12"
         />
       </AppIcon>
 
@@ -69,7 +73,7 @@ import bug from "@/assets/app/bug.png";
         <img
           src={bug.src}
           alt=""
-          class="w-16 cursor-pointer md:w-20 2xl:w-28"
+          class="w-16 cursor-pointer md:w-20 2xl:w-28 landscape:w-12"
         />
       </AppIcon>
     </div>
