@@ -13,10 +13,6 @@
   font-weight: 400;
 }
 
-@font-face {
-  font-family: "SymbolsNerdFonts";
-  src: url("/fonts/SymbolsNerdFont-Regular.woff2");
-}
 
 @theme {
   --font-display: "Space Grotesk", sans-serif;
