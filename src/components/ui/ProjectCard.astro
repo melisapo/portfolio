@@ -7,7 +7,7 @@ interface Props {
   image: ImageMetadata;
   techs: string[];
   projectUrl?: string;
-  repoUrl: string;
+  repoUrl?: string;
 }
 
 const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
@@ -64,6 +64,8 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
           </a>
         )
       }
+      {
+      repoUrl && (
       <a
         title="GitHub repo"
         href={repoUrl}
@@ -82,6 +84,9 @@ const { title, description, image, techs, projectUrl, repoUrl } = Astro.props;
           ></path></svg
         >
       </a>
+
+       )
+      }
     </div>
   </div>
 </div>
